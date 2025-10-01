@@ -1,0 +1,13 @@
+UPDATE ingredientes i
+SET i.qtd_estoque = i.qtd_estoque - (
+    SELECT COALESCE(SUM(t.qtd), 0)
+    FROM itens t
+    WHERE t.id_produto = @codigo_produto
+    AND t.id_ingrediente = i.id
+)
+WHERE EXISTS (
+    SELECT 1
+    FROM itens t
+    WHERE t.id_produto = @codigo_produto
+    AND t.id_ingrediente = i.id
+);
