@@ -68,7 +68,7 @@
 
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                       PriceGenius® - Todos os Direitos Reservados 2024
+                       PriceGenius® - Todos os Direitos Reservados 2025
                     </footer>
                 </div>
             </div>
